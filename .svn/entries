@@ -1,0 +1,88 @@
+10
+
+dir
+110
+http://172.17.17.195/svn/CloudContact/trunk/Client/Android/CloudContact2
+http://172.17.17.195/svn/CloudContact
+
+
+
+2013-06-17T01:53:11.469399Z
+110
+chenyuruan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4968540f-d0cd-bc49-a94a-ec544ca4f6a6
+
+
+
+
+
+
+
+immediates
+
+build
+dir
+
+AndroidManifest.xml
+file
+112
+
+
+
+2013-06-14T07:17:00.000000Z
+19620ccafbbbec4d44aac19920aa49d5
+2013-06-17T02:46:23.422968Z
+112
+chenyuruan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6673
+
+src
+dir
+
+bin
+dir
+
+gen
+dir
+
+libs
+dir
+
+res
+dir
+

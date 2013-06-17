@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/util
+END
+UnitsUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/util/UnitsUtil.java
+END
+ContactUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/util/ContactUtil.java
+END
+AnimationUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/util/AnimationUtil.java
+END
+HttpUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/util/HttpUtil.java
+END
+PushUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/util/PushUtil.java
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout
+END
+activity_main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/activity_main.xml
+END
+fragment_contacts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/fragment_contacts.xml
+END
+fragment_loging.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/fragment_loging.xml
+END
+layout_friend_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/layout_friend_item.xml
+END
+activity_login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/activity_login.xml
+END
+layout_contact_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/layout_contact_item.xml
+END
+activity_message_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/activity_message_list.xml
+END
+layout_bottom_contact.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/layout_bottom_contact.xml
+END
+fragment_friends.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/fragment_friends.xml
+END
+layout_searchview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/layout_searchview.xml
+END
+layout_message_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/res/layout/layout_message_item.xml
+END

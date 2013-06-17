@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:minHeight="80dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/Img_Avatar"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="#ccc"
+            android:paddingLeft="40dip" />
+
+        <TextView
+            android:id="@+id/Tv_ContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Img_Avatar"
+            android:layout_marginLeft="30dip"
+            android:text="123"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Tv_ContactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Tv_ContactName"
+            android:text="123"
+            android:textSize="15sp" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

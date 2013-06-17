@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http
+END
+FriendApi.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/FriendApi.java
+END
+CommonApi.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/CommonApi.java
+END
+LoginApi.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/LoginApi.java
+END
+ContactApi.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/ContactApi.java
+END
+UserIngoApi.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/UserIngoApi.java
+END
+HttpUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/HttpUtil.java
+END
+MessageApi.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/MessageApi.java
+END
+RegisterApi.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/http/RegisterApi.java
+END

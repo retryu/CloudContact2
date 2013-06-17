@@ -1,0 +1,51 @@
+package com.activity.friend;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.db.model.Friend;
+import com.hengtiansoft.cloudcontact.R;
+
+import android.R.layout;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+
+/**
+ * @author retryu E-mail:ruanchenyugood@gmail.com
+ * @version create Time£º2013-6-10 ÏÂÎç02:17:24 file declare:
+ */
+public class FriendFragment extends Fragment {
+	FriendAdapter friendAdapter;
+	ListView friendListView;
+	private View view;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		view = inflater.inflate(R.layout.fragment_friends, null);
+//		initWidget();
+		return view;
+	}
+
+	public void initWidget() {
+		friendListView = (ListView) view.findViewById(R.id.ListView_Friends);
+		FriendAdapter friendAdapter = new FriendAdapter(getActivity());
+		friendAdapter.setFriends(getFrineds());
+		friendListView.setAdapter(friendAdapter);
+	}
+
+	public List<Friend> getFrineds() {
+
+		ArrayList<Friend> contacts = new ArrayList<Friend>();
+		Friend contact;
+		for (int i = 0; i < 10; i++) {
+			contact = new Friend();
+			contacts.add(contact);
+		}
+		return contacts;
+	}
+}

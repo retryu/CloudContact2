@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/db/dao/impl
+END
+ContactDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/db/dao/impl/ContactDaoImpl.java
+END
+UserDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/db/dao/impl/UserDaoImpl.java
+END
+MsgDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/db/dao/impl/MsgDaoImpl.java
+END
+FriendDaoimpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/CloudContact/!svn/ver/111/trunk/Client/Android/CloudContact2/src/com/db/dao/impl/FriendDaoimpl.java
+END

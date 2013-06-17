@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.widget.DropBottomListView
+        android:id="@+id/ListView_Contacts"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        >
+    </com.widget.DropBottomListView>
+    <com.view.DropBottomView
+        android:id="@+id/DropBottomView_Contact"
+        android:background="#ccc"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        ></com.view.DropBottomView>
+
+</RelativeLayout>

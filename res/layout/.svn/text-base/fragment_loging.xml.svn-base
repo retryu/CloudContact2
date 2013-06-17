@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/Layout_User_Mail"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_mail" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/Et_User_Mail"
+            android:layout_width="fill_parent"
+            android:text="aaaa@161.com"
+            android:layout_height="50dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout_User_Pass"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/Layout_User_Mail"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_pass" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/Et_User_Password"
+            android:text="12345678"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout_Login_Opration"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/Layout_User_Pass"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Btn_Register"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:text="@string/register" />
+
+        <Button
+            android:id="@+id/Btn_Logging"
+            android:layout_width="100dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:height="50dip"
+            android:text="@string/loging" />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout_Login_Opration"
+        >
+        <Button 
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:text="注销"
+            />
+        
+        
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>

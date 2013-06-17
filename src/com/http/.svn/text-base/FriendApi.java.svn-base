@@ -1,0 +1,94 @@
+package com.http;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONObject;
+
+import com.db.model.Friend;
+import com.http.response.CommonResponse;
+
+public class FriendApi extends CommonApi {
+	private final static String url = "v1/user";
+
+	private final static String REQUEST_RIREND_URL = "v1/friend/request";
+
+	private final static String GET_FRIEND_URL = "v1/friend";
+
+	private final static String RESPONSE_FRIEND_URL = "v1/message/response";
+
+	public static CommonResponse getFrienf(String clientId) {
+		CommonResponse comResponse = null;
+		JSONObject jsonParams = new JSONObject();
+		try {
+			jsonParams.put("access_token", HttpUtil.Token);
+			jsonParams.put("user_id", HttpUtil.UsreId);
+			jsonParams.put("client_email", clientId);
+			comResponse = HttpUtil.get(MAIN_URL + url, jsonParams);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return comResponse;
+	}
+
+	public static CommonResponse addFriend(String firendId, String msg) {
+		CommonResponse comResponse = null;
+		JSONObject jsonParams = new JSONObject();
+		try {
+			jsonParams.put("access_token", HttpUtil.Token);
+			jsonParams.put("user_id", HttpUtil.UsreId);
+			jsonParams.put("friend_user_id", firendId);
+			jsonParams.put("capthca ", msg);
+			System.err.println(jsonParams);
+			comResponse = HttpUtil.post(MAIN_URL + REQUEST_RIREND_URL,
+					jsonParams);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return comResponse;
+	}
+
+	public static List<Friend> getFriend() {
+		List<Friend> friends = new ArrayList<Friend>();
+
+		return friends;
+	}
+
+	public static List<Friend> getFriends() {
+		List<Friend> friends = new ArrayList<Friend>();
+		CommonResponse comResponse = null;
+		JSONObject jsonParams = new JSONObject();
+
+		try {
+			jsonParams.put("access_token", HttpUtil.getToken());
+			jsonParams.put("user_id", HttpUtil.getUsreId());
+			System.err.println("params:" + jsonParams);
+			comResponse = HttpUtil.post(MAIN_URL + GET_FRIEND_URL, jsonParams);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return friends;
+	}
+
+	public static CommonResponse responseFriend(String msgId, boolean isAgree) {
+		CommonResponse response = null;
+		JSONObject jsonParam = new JSONObject();
+		try {
+			jsonParam.put("access_token", HttpUtil.getToken());
+			jsonParam.put("access_token", HttpUtil.getUsreId());
+			if (isAgree == true) {
+				jsonParam.put("is_delete", "0");
+			} else {
+				jsonParam.put("is_delete", "1");
+			}
+			response = HttpUtil.post(MAIN_URL + RESPONSE_FRIEND_URL, jsonParam);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return response;
+
+	}
+
+}

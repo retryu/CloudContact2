@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="200dip"
+    android:orientation="vertical" >
+    <EditText 
+        android:id="@+id/Et_FriendEmail"
+        android:layout_width="200dip"
+        android:layout_height="20dip"
+        android:layout_centerVertical="true"
+        />
+    
+    <Button 
+        android:id="@+id/Btn_Search"
+        android:layout_toRightOf="@id/Et_FriendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip" 
+        android:text="@string/search"
+        android:layout_alignTop="@id/Et_FriendEmail"
+        />
+    
+
+</RelativeLayout>

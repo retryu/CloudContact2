@@ -1,0 +1,65 @@
+package com.activity.friend;
+
+import java.util.List;
+
+import com.db.model.Friend;
+import com.hengtiansoft.cloudcontact.R;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+/**
+ * @author retryu E-mail:ruanchenyugood@gmail.com
+ * @version create Time£º2013-6-10 ÏÂÎç02:49:19 file declare:
+ */
+public class FriendAdapter extends BaseAdapter {
+
+	List<Friend> friends;
+	private Context context;
+	private LayoutInflater layoutInflater;
+
+	public FriendAdapter(Context c) {
+		this.context = c;
+		layoutInflater = (LayoutInflater) c
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return friends.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		if (convertView == null) {
+			View view = layoutInflater.inflate(R.layout.layout_friend_item,
+					null);
+		}
+		return convertView;
+	}
+
+	public List<Friend> getFriends() {
+		return friends;
+	}
+
+	public void setFriends(List<Friend> friends) {
+		this.friends = friends;
+	}
+
+}

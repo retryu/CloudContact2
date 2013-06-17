@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true" >
+
+        <Button
+            android:id="@+id/Btn_Upload"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="上传通讯录" />
+
+        <Button
+            android:id="@+id/Btn_Restore"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="恢复通讯录"
+             />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+10
+
+dir
+111
+http://172.17.17.195/svn/CloudContact/trunk/Client/Android/CloudContact2/res
+http://172.17.17.195/svn/CloudContact
+
+
+
+2013-06-17T01:54:37.157300Z
+111
+chenyuruan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4968540f-d0cd-bc49-a94a-ec544ca4f6a6
+
+values
+dir
+
+values-sw720dp-land
+dir
+
+values-sw600dp
+dir
+
+drawable-hdpi
+dir
+
+drawable-xxhdpi
+dir
+
+menu
+dir
+
+values-v11
+dir
+
+drawable-ldpi
+dir
+
+values-v14
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+
