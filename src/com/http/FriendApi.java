@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import com.db.model.Friend;
 import com.http.response.CommonResponse;
+import com.model.FriendState;
 
 public class FriendApi extends CommonApi {
 	private final static String url = "v1/user";
@@ -100,4 +101,25 @@ public class FriendApi extends CommonApi {
 		}
 		return friend;
 	}
+
+	public static FriendState checkFriend(String json) {
+		FriendState friendState = new FriendState();
+		try {
+			JSONObject j = new JSONObject(json);
+			if (j.isNull("name") != true) {
+				friendState.setName(j.getString("name"));
+			}
+			if (j.isNull("isAlreadyFriend") != true) {
+				friendState.setIsAlreadyFriend(j.getInt("isAlreadyFriend"));
+			}
+			if (j.isNull("user_id") != true) {
+				friendState.setUserId(j.getString("user_id"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println(friendState);
+		return friendState;
+	}
+
 }

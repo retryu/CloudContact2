@@ -920,23 +920,24 @@ containing a value of this type.
         public static final int ic_search_inverse=0x7f020071;
     }
     public static final class id {
+        public static final int Btn_Add_Friend=0x7f040048;
         public static final int Btn_Logging=0x7f040041;
-        public static final int Btn_Msg_No=0x7f04004a;
-        public static final int Btn_Msg_Yes=0x7f040049;
+        public static final int Btn_Msg_No=0x7f04004b;
+        public static final int Btn_Msg_Yes=0x7f04004a;
         public static final int Btn_Register=0x7f040040;
         public static final int Btn_Restore=0x7f040044;
-        public static final int Btn_Search=0x7f04004d;
+        public static final int Btn_Search=0x7f04004e;
         public static final int Btn_Upload=0x7f040043;
         public static final int Content=0x7f040036;
         public static final int DropBottomView_Contact=0x7f040038;
-        public static final int Et_FriendEmail=0x7f04004c;
+        public static final int Et_FriendEmail=0x7f04004d;
         public static final int Et_User_Mail=0x7f04003c;
         public static final int Et_User_Password=0x7f04003e;
         public static final int HoloAlert=0x7f040033;
         public static final int Img_Avatar=0x7f040045;
         public static final int Layout_Content=0x7f040032;
         public static final int Layout_Login_Opration=0x7f04003f;
-        public static final int Layout_Opr=0x7f040048;
+        public static final int Layout_Opr=0x7f040049;
         public static final int Layout_User_Mail=0x7f04003b;
         public static final int Layout_User_Pass=0x7f04003d;
         public static final int ListView_Contacts=0x7f040037;
@@ -945,7 +946,7 @@ containing a value of this type.
         public static final int SearchView=0x7f04003a;
         public static final int Tv_ContactName=0x7f040046;
         public static final int Tv_ContactNumber=0x7f040047;
-        public static final int Tv_Msg=0x7f04004b;
+        public static final int Tv_Msg=0x7f04004c;
         public static final int ViewPaper=0x7f040034;
         public static final int abs__action_bar=0x7f040020;
         public static final int abs__action_bar_container=0x7f04001f;
@@ -986,14 +987,14 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
-        public static final int action_search=0x7f040050;
-        public static final int action_settings=0x7f04004e;
+        public static final int action_search=0x7f040051;
+        public static final int action_settings=0x7f04004f;
         public static final int disableHome=0x7f040009;
         public static final int edit_query=0x7f040026;
         public static final int homeAsUp=0x7f040006;
         public static final int listMode=0x7f040002;
         public static final int logout=0x7f040042;
-        public static final int msg=0x7f04004f;
+        public static final int msg=0x7f040050;
         public static final int normal=0x7f040001;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
@@ -1036,11 +1037,12 @@ containing a value of this type.
         public static final int layout_bottom_contact=0x7f03001b;
         public static final int layout_contact_item=0x7f03001c;
         public static final int layout_friend_item=0x7f03001d;
-        public static final int layout_message_item=0x7f03001e;
-        public static final int layout_search_friend=0x7f03001f;
-        public static final int layout_searchview=0x7f030020;
-        public static final int sherlock_spinner_dropdown_item=0x7f030021;
-        public static final int sherlock_spinner_item=0x7f030022;
+        public static final int layout_friend_search_item=0x7f03001e;
+        public static final int layout_message_item=0x7f03001f;
+        public static final int layout_search_friend=0x7f030020;
+        public static final int layout_searchview=0x7f030021;
+        public static final int sherlock_spinner_dropdown_item=0x7f030022;
+        public static final int sherlock_spinner_item=0x7f030023;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;

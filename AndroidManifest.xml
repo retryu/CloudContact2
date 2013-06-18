@@ -63,7 +63,9 @@
                 <category android:name="jpush.testCategory" />
             </intent-filter>
         </activity>
-        <activity android:name="com.activity.message.MessageActivity" >
+        <activity
+            android:name="com.activity.message.MessageActivity"
+            android:launchMode="singleTask" >
         </activity>
         <activity android:name="com.activity.friend.SearchFriendActivity" >
         </activity>

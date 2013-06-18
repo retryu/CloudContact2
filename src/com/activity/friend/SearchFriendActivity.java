@@ -18,6 +18,7 @@ public class SearchFriendActivity extends CommonActivity {
 
 	private SearchView searchView;
 	ListViewSearch lvFriend;
+	private FriendSearchAdapter searchAdapter;
 
 	@Override
 	public void onCreate(Bundle arg0) {
@@ -29,7 +30,8 @@ public class SearchFriendActivity extends CommonActivity {
 
 	private void initWidget() {
 		lvFriend = (ListViewSearch) findViewById(R.id.ListView_Friends);
-
+		searchAdapter = new FriendSearchAdapter(this);
+		lvFriend.setSearchAdapter(searchAdapter);
 	}
 
 	@SuppressLint("NewApi")

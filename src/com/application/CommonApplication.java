@@ -13,9 +13,9 @@ public class CommonApplication extends Application {
 		JPushInterface.setDebugMode(true);
 		JPushInterface.init(this);  
 		//µ˜”√JPush API…Ë÷√Alias
-		JPushInterface.setAliasAndTags(
-				this,
-				"35", null);
+//		JPushInterface.setAliasAndTags(
+//				this, 
+//				"43", null);  
 	}
 
 }

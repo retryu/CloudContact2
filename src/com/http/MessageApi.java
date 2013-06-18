@@ -123,7 +123,7 @@ public class MessageApi extends CommonApi {
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}  
 		return id;
 	}
 
@@ -133,6 +133,7 @@ public class MessageApi extends CommonApi {
 		try {
 			jsonParam.put("access_token", HttpUtil.getToken());
 			jsonParam.put("user_id", HttpUtil.getUsreId());
+			jsonParam.put("message_id", msgId);
 			if (isAgree == true) {
 				jsonParam.put("is_delete", "0");
 			} else {

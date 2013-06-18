@@ -116,7 +116,6 @@ public class ContactFragment extends Fragment {
 	public List<Contact> getContacts() {
 		contactUtil = new ContactUtil(getActivity());
 		List<Contact> contacts = contactUtil.query();
-
 		return contacts;
 	}
 

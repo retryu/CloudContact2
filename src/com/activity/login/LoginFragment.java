@@ -177,7 +177,7 @@ public class LoginFragment extends Fragment implements OnClickListener {
 		String userPassWord = etUserPass.getText().toString();
 		User user = new User();
 		user.setEmail(userMail);
-		user.setPassword(userMail);
+		user.setPassword(userPassWord);
 		return user;
 	}
 
@@ -194,7 +194,7 @@ public class LoginFragment extends Fragment implements OnClickListener {
 				User u = (User) msg.obj;
 				HttpUtil.setUser(u);
 				try {
-					userDao.create(u);
+					userDao.create(u);  
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
