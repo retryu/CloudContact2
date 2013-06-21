@@ -19,7 +19,7 @@ import com.http.response.CommonResponse;
 import com.util.PushUtil;
 
 public class MessageActivity extends SherlockFragmentActivity {
-
+  
 	public static final int MSG_DATA = 1;
 	public static final int MSG_UPDATE = 2;
 	public static final int MSG_CHANGE_STATE = 3;
@@ -27,7 +27,7 @@ public class MessageActivity extends SherlockFragmentActivity {
 	private ListView listViewMessage;
 	MessageAdapter msgAdapter;
 	private UIHandler uiHandler;
-	private Intent msgIntent;
+	private Intent msgIntent;  
 	private static boolean needRefersh = false;
 
 	@Override
@@ -49,8 +49,8 @@ public class MessageActivity extends SherlockFragmentActivity {
 		Log.e("debug", "new Intent");
 	}
 
-	private void checkMsg() {
-		msgIntent = getIntent();
+	private void checkMsg() {  
+		msgIntent = getIntent();  
 		if (msgIntent != null) {
 			Bundle b = msgIntent.getExtras();
 			if (b != null) {

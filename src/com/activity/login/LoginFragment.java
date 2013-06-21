@@ -19,7 +19,9 @@ import android.widget.LinearLayout;
 
 import cn.jpush.android.api.JPushInterface;
 
+import com.activity.IndexActivity;
 import com.activity.MainActivity;
+import com.activity.profile.ProfileActivity;
 import com.db.dao.interfaze.UserDao;
 import com.db.model.Contact;
 import com.db.model.User;
@@ -44,8 +46,8 @@ public class LoginFragment extends Fragment implements OnClickListener {
 	private LoginActivity loginActivity;
 	private LinearLayout linearLayout;
 	private UiHandler uiHandler;
-	
-	private  Button  btnLogOut;
+
+	private Button btnLogOut;
 
 	private static final int MSG_TO_MAIN = 1;
 	private static final int MSG_SHOW_ERROR = 2;
@@ -72,12 +74,12 @@ public class LoginFragment extends Fragment implements OnClickListener {
 				.findViewById(R.id.Layout_Login_Opration);
 		btnLogging.setOnClickListener(this);
 		btnRegister.setOnClickListener(this);
-		btnLogOut=(Button)view.findViewById(R.id.logout);
+		btnLogOut = (Button) view.findViewById(R.id.logout);
 		btnLogOut.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-			JPushInterface.resumePush(loginActivity);
-				
+				JPushInterface.resumePush(loginActivity);
+
 			}
 		});
 	}
@@ -121,20 +123,18 @@ public class LoginFragment extends Fragment implements OnClickListener {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					User user = LoginApi.toUser(commonResponse.getResponse());  
+					User user = LoginApi.toUser(commonResponse.getResponse());
 					JPushInterface.setAliasAndTags(
 							loginActivity.getApplicationContext(),
 							user.getUserId(), null);
 					HttpUtil.setUser(user);
-					
-					 
-//					ContactApi.restoreContacts();
-					
-					
-					 Message msg = new Message();
-					 msg.what = MSG_TO_MAIN;
-					 msg.obj = user;
-					 uiHandler.sendMessage(msg);
+
+					// ContactApi.restoreContacts();
+
+					Message msg = new Message();
+					msg.what = MSG_TO_MAIN;
+					msg.obj = user;
+					uiHandler.sendMessage(msg);
 
 				} else {
 					Message msg = new Message();
@@ -155,13 +155,13 @@ public class LoginFragment extends Fragment implements OnClickListener {
 
 		new Thread() {
 			public void run() {
-				CommonResponse  response=RegisterApi.register(user);
-					User  user=LoginApi.toUser(response.getResponse());
-					
-					JPushInterface.setAliasAndTags(
-							loginActivity.getApplicationContext(),
-							user.getUserId(), null);
-					
+				CommonResponse response = RegisterApi.register(user);
+				User user = LoginApi.toUser(response.getResponse());
+
+				JPushInterface.setAliasAndTags(
+						loginActivity.getApplicationContext(),
+						user.getUserId(), null);
+
 			};
 		}.start();
 
@@ -192,15 +192,21 @@ public class LoginFragment extends Fragment implements OnClickListener {
 				UserDao userDao = loginActivity.getOrmDateBaseHelper()
 						.getUserDao();
 				User u = (User) msg.obj;
+				try {
+					userDao.create(u);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				HttpUtil.setUser(u);
 				try {
-					userDao.create(u);  
+					userDao.create(u);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
-				Intent intent = new Intent(getActivity(), MainActivity.class);
+				Intent intent = new Intent(getActivity(), IndexActivity.class);
 				startActivity(intent);
 				loginActivity.finish();
 				break;

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#2e96df"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/Img_Logo"
+        android:layout_width="105dip"
+        android:layout_height="50dip"
+        android:background="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/Img_Profile"
+        android:layout_width="29dip"
+        android:layout_height="39dip"
+        android:layout_alignBottom="@id/Img_Logo"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/profile" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:layout_below="@id/Img_Profile" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="70dip"
+                android:layout_height="55dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/upload" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="70dip"
+                android:layout_height="55dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/friendslist" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:layout_width="70dip"
+                android:layout_height="55dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/download" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

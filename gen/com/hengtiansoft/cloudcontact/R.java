@@ -365,6 +365,14 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int logo=0x7f01004e;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int name=0x7f010062;
         /**  The type of navigation to use. 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -686,15 +694,19 @@ containing a value of this type.
         public static final int abs__bright_foreground_disabled_holo_light=0x7f060005;
         public static final int abs__bright_foreground_holo_dark=0x7f060002;
         public static final int abs__bright_foreground_holo_light=0x7f060003;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f06000a;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f06000b;
-        public static final int abs__primary_text_holo_dark=0x7f06000c;
-        public static final int abs__primary_text_holo_light=0x7f06000d;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f06000e;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f06000f;
+        public static final int abs__primary_text_holo_dark=0x7f060010;
+        public static final int abs__primary_text_holo_light=0x7f060011;
         /**  33b5e5 
          */
         public static final int alert=0x7f060006;
         public static final int confirm=0x7f060007;
+        public static final int edit_bg=0x7f06000b;
+        public static final int edit_text_color=0x7f06000c;
+        public static final int edit_text_head_color=0x7f06000d;
         public static final int info=0x7f060008;
+        public static final int light_blue=0x7f06000a;
         public static final int number_key_press_bg=0x7f060009;
     }
     public static final class dimen {
@@ -916,38 +928,53 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_dark=0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static final int abs__toast_frame=0x7f02006f;
-        public static final int ic_launcher=0x7f020070;
-        public static final int ic_search_inverse=0x7f020071;
+        public static final int background=0x7f020070;
+        public static final int download=0x7f020071;
+        public static final int friendslist=0x7f020072;
+        public static final int ic_launcher=0x7f020073;
+        public static final int ic_search_inverse=0x7f020074;
+        public static final int logo=0x7f020075;
+        public static final int profile=0x7f020076;
+        public static final int upload=0x7f020077;
     }
     public static final class id {
-        public static final int Btn_Add_Friend=0x7f040048;
-        public static final int Btn_Logging=0x7f040041;
-        public static final int Btn_Msg_No=0x7f04004b;
-        public static final int Btn_Msg_Yes=0x7f04004a;
-        public static final int Btn_Register=0x7f040040;
-        public static final int Btn_Restore=0x7f040044;
-        public static final int Btn_Search=0x7f04004e;
-        public static final int Btn_Upload=0x7f040043;
-        public static final int Content=0x7f040036;
-        public static final int DropBottomView_Contact=0x7f040038;
-        public static final int Et_FriendEmail=0x7f04004d;
-        public static final int Et_User_Mail=0x7f04003c;
-        public static final int Et_User_Password=0x7f04003e;
-        public static final int HoloAlert=0x7f040033;
-        public static final int Img_Avatar=0x7f040045;
-        public static final int Layout_Content=0x7f040032;
-        public static final int Layout_Login_Opration=0x7f04003f;
-        public static final int Layout_Opr=0x7f040049;
-        public static final int Layout_User_Mail=0x7f04003b;
-        public static final int Layout_User_Pass=0x7f04003d;
-        public static final int ListView_Contacts=0x7f040037;
-        public static final int ListView_Friends=0x7f040039;
-        public static final int ListView_Message=0x7f040035;
-        public static final int SearchView=0x7f04003a;
-        public static final int Tv_ContactName=0x7f040046;
-        public static final int Tv_ContactNumber=0x7f040047;
-        public static final int Tv_Msg=0x7f04004c;
-        public static final int ViewPaper=0x7f040034;
+        public static final int Btn_Add_Friend=0x7f040050;
+        public static final int Btn_Back=0x7f040038;
+        public static final int Btn_Logging=0x7f040049;
+        public static final int Btn_Msg_No=0x7f040054;
+        public static final int Btn_Msg_Yes=0x7f040053;
+        public static final int Btn_Register=0x7f040048;
+        public static final int Btn_Restore=0x7f04004c;
+        public static final int Btn_Search=0x7f040057;
+        public static final int Btn_Update=0x7f04003d;
+        public static final int Btn_Upload=0x7f04004b;
+        public static final int Content=0x7f04003e;
+        public static final int DropBottomView_Contact=0x7f040040;
+        public static final int ET_Content=0x7f040051;
+        public static final int Et_FriendEmail=0x7f040056;
+        public static final int Et_User_Mail=0x7f040044;
+        public static final int Et_User_Password=0x7f040046;
+        public static final int He_Home=0x7f04003b;
+        public static final int He_Mobile=0x7f04003a;
+        public static final int He_QQ=0x7f04003c;
+        public static final int HoloAlert=0x7f040035;
+        public static final int Img_Avatar=0x7f04004d;
+        public static final int Img_Logo=0x7f040032;
+        public static final int Img_Profile=0x7f040033;
+        public static final int Layout_Content=0x7f040034;
+        public static final int Layout_Login_Opration=0x7f040047;
+        public static final int Layout_Opr=0x7f040052;
+        public static final int Layout_User_Mail=0x7f040043;
+        public static final int Layout_User_Pass=0x7f040045;
+        public static final int ListView_Contacts=0x7f04003f;
+        public static final int ListView_Friends=0x7f040041;
+        public static final int ListView_Message=0x7f040037;
+        public static final int SearchView=0x7f040042;
+        public static final int Tv_ContactName=0x7f04004e;
+        public static final int Tv_ContactNumber=0x7f04004f;
+        public static final int Tv_Head=0x7f040039;
+        public static final int Tv_Msg=0x7f040055;
+        public static final int ViewPaper=0x7f040036;
         public static final int abs__action_bar=0x7f040020;
         public static final int abs__action_bar_container=0x7f04001f;
         public static final int abs__action_bar_subtitle=0x7f040011;
@@ -987,14 +1014,14 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
-        public static final int action_search=0x7f040051;
-        public static final int action_settings=0x7f04004f;
+        public static final int action_search=0x7f04005a;
+        public static final int action_settings=0x7f040058;
         public static final int disableHome=0x7f040009;
         public static final int edit_query=0x7f040026;
         public static final int homeAsUp=0x7f040006;
         public static final int listMode=0x7f040002;
-        public static final int logout=0x7f040042;
-        public static final int msg=0x7f040050;
+        public static final int logout=0x7f04004a;
+        public static final int msg=0x7f040059;
         public static final int normal=0x7f040001;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
@@ -1028,21 +1055,24 @@ containing a value of this type.
         public static final int abs__search_dropdown_item_icons_2line=0x7f030012;
         public static final int abs__search_view=0x7f030013;
         public static final int abs__simple_dropdown_hint=0x7f030014;
-        public static final int activity_login=0x7f030015;
-        public static final int activity_main=0x7f030016;
-        public static final int activity_message_list=0x7f030017;
-        public static final int fragment_contacts=0x7f030018;
-        public static final int fragment_friends=0x7f030019;
-        public static final int fragment_loging=0x7f03001a;
-        public static final int layout_bottom_contact=0x7f03001b;
-        public static final int layout_contact_item=0x7f03001c;
-        public static final int layout_friend_item=0x7f03001d;
-        public static final int layout_friend_search_item=0x7f03001e;
-        public static final int layout_message_item=0x7f03001f;
-        public static final int layout_search_friend=0x7f030020;
-        public static final int layout_searchview=0x7f030021;
-        public static final int sherlock_spinner_dropdown_item=0x7f030022;
-        public static final int sherlock_spinner_item=0x7f030023;
+        public static final int activity_index=0x7f030015;
+        public static final int activity_login=0x7f030016;
+        public static final int activity_main=0x7f030017;
+        public static final int activity_message_list=0x7f030018;
+        public static final int activity_profile=0x7f030019;
+        public static final int fragment_contacts=0x7f03001a;
+        public static final int fragment_friends=0x7f03001b;
+        public static final int fragment_loging=0x7f03001c;
+        public static final int layout_bottom_contact=0x7f03001d;
+        public static final int layout_contact_item=0x7f03001e;
+        public static final int layout_friend_item=0x7f03001f;
+        public static final int layout_friend_search_item=0x7f030020;
+        public static final int layout_head_edittext=0x7f030021;
+        public static final int layout_message_item=0x7f030022;
+        public static final int layout_search_friend=0x7f030023;
+        public static final int layout_searchview=0x7f030024;
+        public static final int sherlock_spinner_dropdown_item=0x7f030025;
+        public static final int sherlock_spinner_item=0x7f030026;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
@@ -1219,6 +1249,33 @@ containing a value of this type.
         public static final int Widget_Sherlock_TextView_SpinnerItem=0x7f0a0032;
     }
     public static final class styleable {
+        /** Attributes that can be used with a MyEdit.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MyEdit_name com.hengtiansoft.cloudcontact:name}</code></td><td></td></tr>
+           </table>
+           @see #MyEdit_name
+         */
+        public static final int[] MyEdit = {
+            0x7f010062
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.hengtiansoft.cloudcontact.R.attr#name}
+          attribute's value can be found in the {@link #MyEdit} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:name
+        */
+        public static final int MyEdit_name = 0;
         /**  Attributes used to style the Action Bar. 
            <p>Includes the following attributes:</p>
            <table>

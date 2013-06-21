@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custome="http://schemas.android.com/apk/res/com.hengtiansoft.cloudcontact"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#2e96df"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/Btn_Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:background="#11639f"
+        android:text="Back"
+        android:textColor="#8ad0ff" />
+
+    <ImageView
+        android:id="@+id/Img_Profile"
+        android:layout_width="58dip"
+        android:layout_height="77dip"
+        android:layout_below="@id/Btn_Back"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/Tv_Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Img_Profile"
+        android:layout_centerHorizontal="true"
+        android:text="Profile"
+        android:textColor="#e2f4fe" />
+
+    <com.widget.HeadEditText
+        android:id="@+id/He_Mobile"
+        custome:name="Mobile"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/Tv_Head"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:layout_marginTop="15dip" >
+    </com.widget.HeadEditText>
+
+    <com.widget.HeadEditText
+        android:id="@+id/He_Home"
+        custome:name="Home  "
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/He_Mobile"
+        android:layout_marginLeft="30dip"
+        android:layout_marginTop="-1dip"
+        android:layout_marginRight="30dip" >
+    </com.widget.HeadEditText>
+
+    <com.widget.HeadEditText
+        android:id="@+id/He_QQ"
+        custome:name="QQ    "
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/He_Home"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:layout_marginTop="10dip" >
+    </com.widget.HeadEditText>
+
+    <Button
+        android:id="@+id/Btn_Update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/He_QQ"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:background="#7fd3ff"
+        android:text="Update"
+        android:textColor="#f2f9ff" />
+
+</RelativeLayout>

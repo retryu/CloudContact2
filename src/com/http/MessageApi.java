@@ -1,5 +1,6 @@
 package com.http;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.R.integer;
+import android.util.JsonReader;
 
 import cn.jpush.android.c.s;
 
@@ -123,7 +125,7 @@ public class MessageApi extends CommonApi {
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}  
+		}
 		return id;
 	}
 
@@ -145,6 +147,16 @@ public class MessageApi extends CommonApi {
 			e.printStackTrace();
 		}
 		return response;
+	}
 
+	public static int getMessageType(String json) {
+		int type =-1;
+		try {
+			JSONObject typeJson = new JSONObject(json);
+			type = typeJson.getInt("messageType");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return type;
 	}
 }

@@ -2,6 +2,8 @@ package com.receive;
 
 import com.activity.MainActivity;
 import com.activity.message.MessageActivity;
+import com.http.MessageApi;
+import com.util.PushUtil;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -51,10 +53,22 @@ public class PushReceiver extends BroadcastReceiver {
 				.getAction())) {
 			Log.d(TAG, "用户点击打开了通知");
 
-			// 打开自定义的Activity
-			Intent i = new Intent(context, MessageActivity.class);
+			String msgJson = bundle.getString(PushUtil.PUSH_DATA_EXTRA);
+			int msgType = MessageApi.getMessageType(msgJson);
+			Log.e("debug", "msgType:" + msgType + "  msgJson:" + msgJson);
+			Intent i;
+			if (msgType == 1) {
+				i = new Intent(context, MainActivity.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				bundle.putString("type", "refersh");
+			} else {
+				i = new Intent(context, MessageActivity.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+			}
+
 			i.putExtras(bundle);
-			i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
 			context.startActivity(i);
 
 		} else {

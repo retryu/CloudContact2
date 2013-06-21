@@ -15,8 +15,8 @@ public class CommonActivity extends  SherlockFragmentActivity  {
 		super.onCreate(arg0);
 		ormDateBaseHelper=new OrmDateBaseHelper(this,
 				"cloud_contact", null, 1);
-	}
-
+	}  
+  
 	public OrmDateBaseHelper getOrmDateBaseHelper() {
 		return ormDateBaseHelper;
 	}
