@@ -11,7 +11,7 @@ import com.db.model.Contact;
 import com.http.response.CommonResponse;
 
 /**
- * @author chenyuruan ÁªÏµÈËÇëÇóÀà
+ * @author chenyuruan ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class ContactApi extends CommonApi {
 
@@ -40,8 +40,10 @@ public class ContactApi extends CommonApi {
 
 	public static List<Contact> toContacts(String jsonContacts) {
 		List<Contact> contacts = new ArrayList<Contact>();
+
 		try {
-			JSONArray jsonArray = new JSONArray(jsonContacts);
+			JSONObject jsoncontacts = new JSONObject(jsonContacts);
+			JSONArray jsonArray = jsoncontacts.getJSONArray("contacts");
 			for (int i = 0; i < jsonArray.length(); i++) {
 				JSONObject json = jsonArray.getJSONObject(i);
 				Contact contact = toContact(json);

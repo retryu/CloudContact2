@@ -35,7 +35,7 @@ public class HttpUtil {
 	public final static int CODE_SUCESS = 200;
 	// response statie is fail
 	public final static int CODE_FAIL = 400;
-	public  final  static  int  CODE_NULL=204;
+	public final static int CODE_NULL = 204;
 
 	public static String UsreId = "4";
 
@@ -60,11 +60,12 @@ public class HttpUtil {
 			comResponse = new CommonResponse();
 			int state = httpResponse.getStatusLine().getStatusCode();
 			comResponse.setStateCode(state);
-			if(state!=CODE_NULL){
-			String response = EntityUtils.toString(httpResponse.getEntity());
-			comResponse.setResponse(response);
-			HttpEntity httpEntity = httpResponse.getEntity();
-			System.err.println("body:" + response);
+			if (state != CODE_NULL) {
+				String response = EntityUtils
+						.toString(httpResponse.getEntity());
+				comResponse.setResponse(response);
+				HttpEntity httpEntity = httpResponse.getEntity();
+				System.err.println("body:" + response);
 			}
 
 		} catch (Exception e) {
@@ -94,19 +95,21 @@ public class HttpUtil {
 		String response = null;
 		CommonResponse comResponse = new CommonResponse();
 		System.out.println("post url:" + url);
-		System.out.println("params:"+params);
+		System.out.println("params:" + params);
 		try {
 			HttpPost post = new HttpPost(url);
 			if (params != null) {
-				StringEntity strEntity = new StringEntity(params.toString());
+				StringEntity strEntity = new StringEntity(params.toString(), "utf-8");
 				post.setEntity(strEntity);
 			}
 			HttpResponse httpResponse = client.execute(post);
 			int stateCode = httpResponse.getStatusLine().getStatusCode();
-			response = EntityUtils.toString(httpResponse.getEntity());
-			comResponse.setStateCode(stateCode);
-			comResponse.setResponse(response);
-			System.err.println("" + comResponse);
+			if (httpResponse.getEntity() != null) {
+				response = EntityUtils.toString(httpResponse.getEntity());
+				comResponse.setStateCode(stateCode);
+				comResponse.setResponse(response);
+				System.err.println("" + comResponse);
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -174,7 +177,7 @@ public class HttpUtil {
 		return new DefaultHttpClient(connMgr, params);
 	}
 
-	// ¹Ø±ÕÁ¬½Ó¹ÜÀíÆ÷²¢ÊÍ·Å×ÊÔ´
+	// ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ó¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Ô´
 	public static void shutdownclient() {
 		if (client != null && client.getConnectionManager() != null) {
 			client.getConnectionManager().shutdown();
@@ -182,7 +185,7 @@ public class HttpUtil {
 		}
 	}
 
-	// ¶ÔÍâÌá¹©clientÊµÀý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½á¹©clientÊµï¿½ï¿½
 	public static HttpClient getHttpClient() {
 		if (client == null) {
 			client = createHttpClient();
@@ -205,17 +208,12 @@ public class HttpUtil {
 	public static void setToken(String token) {
 		Token = token;
 	}
-	
-	public  static  void  setUser(User  user)	{
-		String  userId=user.getUserId();
-		String  token=user.getAccess_token();
+
+	public static void setUser(User user) {
+		String userId = user.getUserId();
+		String token = user.getAccess_token();
 		setUsreId(userId);
 		setToken(token);
 	}
-	
-	
-	
-	
-	
 
 }

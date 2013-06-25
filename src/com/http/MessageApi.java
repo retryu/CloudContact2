@@ -1,5 +1,6 @@
 package com.http;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.R.integer;
+import android.util.JsonReader;
 
 import cn.jpush.android.c.s;
 
@@ -133,6 +135,7 @@ public class MessageApi extends CommonApi {
 		try {
 			jsonParam.put("access_token", HttpUtil.getToken());
 			jsonParam.put("user_id", HttpUtil.getUsreId());
+			jsonParam.put("message_id", msgId);
 			if (isAgree == true) {
 				jsonParam.put("is_delete", "0");
 			} else {
@@ -144,6 +147,16 @@ public class MessageApi extends CommonApi {
 			e.printStackTrace();
 		}
 		return response;
+	}
 
+	public static int getMessageType(String json) {
+		int type =-1;
+		try {
+			JSONObject typeJson = new JSONObject(json);
+			type = typeJson.getInt("messageType");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return type;
 	}
 }

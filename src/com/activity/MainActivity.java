@@ -24,8 +24,10 @@ public class MainActivity extends CommonActivity {
 
 	private ViewPager viewPager;
 	private Fragment contaFragment;
-	private Fragment firendFragment;
+	private FriendFragment firendFragment;  
 	ActionBar actionBar;
+	private static final String INTENT_REFERSH = "refersh";
+	private boolean needRefersh;
 
 	@Override
 	public void onCreate(Bundle arg0) {
@@ -33,6 +35,21 @@ public class MainActivity extends CommonActivity {
 		super.onCreate(arg0);
 		setContentView(R.layout.activity_main);
 		init();
+	}
+
+	@Override
+	protected void onNewIntent(Intent intent) {
+		// TODO Auto-generated method stub
+		super.onNewIntent(intent);
+		Log.e("debug", "MainActivity onNewIntent");
+		Bundle bundle = intent.getExtras();
+		if (bundle != null) {
+			String type = bundle.getString("type");
+			if (type.equals(INTENT_REFERSH)) {
+				needRefersh=true;
+			}
+		}
+
 	}
 
 	@Override
@@ -46,7 +63,8 @@ public class MainActivity extends CommonActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
-		Log.e("debug", "groupId:" + item.getGroupId() + "  " + item.getItemId()+"  id"+R.id.msg);
+		Log.e("debug", "groupId:" + item.getGroupId() + "  " + item.getItemId()
+				+ "  id" + R.id.msg);
 		Intent intent = new Intent(this, MessageActivity.class);
 		intent.putExtra(PushUtil.PUSH_DATA_EXTRA, "{'messageID':'89'}");
 		startActivity(intent);
@@ -55,6 +73,7 @@ public class MainActivity extends CommonActivity {
 	}
 
 	public void init() {
+		needRefersh=false;
 		actionBar = getSupportActionBar();
 		viewPager = (ViewPager) findViewById(R.id.ViewPaper);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -63,6 +82,10 @@ public class MainActivity extends CommonActivity {
 				ContactFragment.class, null);
 		tabsAdapter.addTab(actionBar.newTab().setText("≈Û”—"),
 				FriendFragment.class, null);
+
+		firendFragment = (FriendFragment) tabsAdapter.getItem(1);
+		firendFragment.setNeedRefesh(needRefersh);
+		
 	}
 
 }

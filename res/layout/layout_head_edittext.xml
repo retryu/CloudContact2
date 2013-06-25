@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="1dip" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#97cbf0" >
+
+        <TextView
+            android:id="@+id/Tv_Head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Mobile"
+            android:layout_marginLeft="10dip"
+            android:textColor="@color/edit_text_head_color" />
+
+        <EditText
+            android:id="@+id/ET_Content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/Tv_Head"
+            android:background="#97cbf0"
+            android:text="123"
+            android:textColor="@color/edit_text_color" />
+    </RelativeLayout>
+
+</RelativeLayout>

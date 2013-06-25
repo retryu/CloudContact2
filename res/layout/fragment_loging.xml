@@ -10,7 +10,7 @@
         android:layout_height="50dip"
         android:layout_marginLeft="50dip"
         android:layout_marginRight="50dip"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" > 
 
         <TextView
             android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         <EditText
             android:id="@+id/Et_User_Mail"
             android:layout_width="fill_parent"
-            android:text="aaaa@161.com"
+            android:text="ccc@161.com"
             android:layout_height="50dip" />
     </LinearLayout>
 
