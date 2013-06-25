@@ -99,7 +99,7 @@ public class HttpUtil {
 		try {
 			HttpPost post = new HttpPost(url);
 			if (params != null) {
-				StringEntity strEntity = new StringEntity(params.toString());
+				StringEntity strEntity = new StringEntity(params.toString(), "utf-8");
 				post.setEntity(strEntity);
 			}
 			HttpResponse httpResponse = client.execute(post);
@@ -177,7 +177,7 @@ public class HttpUtil {
 		return new DefaultHttpClient(connMgr, params);
 	}
 
-	// ¹Ø±ÕÁ¬½Ó¹ÜÀíÆ÷²¢ÊÍ·Å×ÊÔ´
+	// ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ó¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Ô´
 	public static void shutdownclient() {
 		if (client != null && client.getConnectionManager() != null) {
 			client.getConnectionManager().shutdown();
@@ -185,7 +185,7 @@ public class HttpUtil {
 		}
 	}
 
-	// ¶ÔÍâÌá¹©clientÊµÀý
+	// ï¿½ï¿½ï¿½ï¿½ï¿½á¹©clientÊµï¿½ï¿½
 	public static HttpClient getHttpClient() {
 		if (client == null) {
 			client = createHttpClient();

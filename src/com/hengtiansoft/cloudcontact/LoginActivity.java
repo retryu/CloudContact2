@@ -1,10 +1,12 @@
 package com.hengtiansoft.cloudcontact;
 
+import java.security.PublicKey;
 import java.sql.SQLException;
 import java.util.List;
 
 import org.json.JSONArray;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +15,7 @@ import android.util.Log;
 import android.widget.FrameLayout;
 
 import com.activity.CommonActivity;
+import com.activity.IndexActivity;
 import com.activity.login.LoginFragment;
 import com.db.OrmDateBaseHelper;
 import com.db.dao.interfaze.UserDao;
@@ -29,12 +32,20 @@ public class LoginActivity extends CommonActivity {
 	private FragmentManager fm;
 	private FragmentTransaction ft;
 	private HoloAlert holoAlert;
+	private UserDao userDao;
 
-	@Override 
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 		// testQuery();
+		userDao = getOrmDateBaseHelper().getUserDao();
+		boolean isExits = userDao.isExits();
+		if (isExits == true) {
+			Intent intent = new Intent(this, IndexActivity.class);
+			startActivity(intent);
+		}
+
 		init();
 	}
 
@@ -46,22 +57,22 @@ public class LoginActivity extends CommonActivity {
 		Fragment loginFragment = getLoginFragment();
 		ft.add(R.id.Layout_Content, loginFragment);
 		ft.commit();
-		
-//		OrmDateBaseHelper ormDateBaseHelper = new OrmDateBaseHelper(this,
-//				"cloud_contact", null, 1);
-//		UserDao userDao = ormDateBaseHelper.getUserDao();
-//		User user = new User();
-//		user.setName("123");
-//		user.setCellPhon1("13567124034");
-//		user.setEmail("xxx@gmail.com");
-//		try {
-//			userDao.create(user);
-//			
-//			List<User> users=userDao.queryForAll();
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+
+		// OrmDateBaseHelper ormDateBaseHelper = new OrmDateBaseHelper(this,
+		// "cloud_contact", null, 1);
+		// UserDao userDao = ormDateBaseHelper.getUserDao();
+		// User user = new User();
+		// user.setName("123");
+		// user.setCellPhon1("13567124034");
+		// user.setEmail("xxx@gmail.com");
+		// try {
+		// userDao.create(user);
+		//
+		// List<User> users=userDao.queryForAll();
+		// } catch (SQLException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
 
 	}
 

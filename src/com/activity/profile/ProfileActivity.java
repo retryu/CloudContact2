@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.activity.CommonActivity;
+import com.activity.IndexActivity;
 import com.activity.MainActivity;
 import com.db.OrmDateBaseHelper;
 import com.db.dao.interfaze.UserDao;
@@ -21,7 +22,7 @@ import com.widget.HeadEditText;
 
 /**
  * @author retryu E-mail:ruanchenyugood@gmail.com
- * @version create Time£º2013-6-21 ÏÂÎç01:29:33 file declare:
+ * @version create Timeï¿½ï¿½2013-6-21 ï¿½ï¿½ï¿½ï¿½01:29:33 file declare:
  */
 public class ProfileActivity extends CommonActivity implements
 		android.view.View.OnClickListener {
@@ -116,7 +117,7 @@ public class ProfileActivity extends CommonActivity implements
 			}.start();
 			break;
 		case R.id.Btn_Back:
-			Intent intent = new Intent(this, MainActivity.class);
+			Intent intent = new Intent(this, IndexActivity.class);
 			startActivity(intent);
 			break;
 		}
@@ -130,7 +131,7 @@ public class ProfileActivity extends CommonActivity implements
 			int what = msg.what;
 			switch (what) {
 			case MSG_ALERT:
-				Toast.makeText(getApplicationContext(), "¸üÐÂÍê³É",
+				Toast.makeText(getApplicationContext(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
 						Toast.LENGTH_LONG).show();
 				break;
 

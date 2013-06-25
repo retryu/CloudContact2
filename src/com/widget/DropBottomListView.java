@@ -37,32 +37,32 @@ public class DropBottomListView extends ListView implements OnTouchListener {
 
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
-		// TODO Auto-generated method stub
-
-		int  action=event.getAction();
-		switch (action) {
-		case MotionEvent.ACTION_DOWN:
-			y=event.getY();
-			break;
-
-		case  MotionEvent.ACTION_MOVE:
-			yOld = y;
-			y = event.getY();
-			float  x=event.getX();
-			float  diss=y-yOld;
-			
-			if(y-yOld>30){
-				dropBottom.show((int)diss);
-			}
-			if(y-yOld<-30){  
-				dropBottom.hide((int)diss);
-			}
-			break;
-		case  MotionEvent.ACTION_UP:
-			clearAction();
-			break;
-		}
-		 
+//		// TODO Auto-generated method stub
+//
+//		int  action=event.getAction();
+//		switch (action) {
+//		case MotionEvent.ACTION_DOWN:
+//			y=event.getY();
+//			break;
+//
+//		case  MotionEvent.ACTION_MOVE:
+//			yOld = y;
+//			y = event.getY();
+//			float  x=event.getX();
+//			float  diss=y-yOld;
+//			
+//			if(y-yOld>30){
+//				dropBottom.show((int)diss);
+//			}
+//			if(y-yOld<-30){  
+//				dropBottom.hide((int)diss);
+//			}
+//			break;
+//		case  MotionEvent.ACTION_UP:
+//			clearAction();
+//			break;
+//		}
+//		 
 		return false;
 	}
 	

@@ -116,7 +116,7 @@ public class LoginFragment extends Fragment implements OnClickListener {
 					try {
 						Message msg = new Message();
 						msg.what = MSG_SHOW;
-						msg.obj = "µÇÈë³É¹¦";
+						msg.obj = "ï¿½ï¿½ï¿½ï¿½É¹ï¿½";
 						uiHandler.sendMessage(msg);
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
@@ -199,13 +199,6 @@ public class LoginFragment extends Fragment implements OnClickListener {
 					e1.printStackTrace();
 				}
 				HttpUtil.setUser(u);
-				try {
-					userDao.create(u);
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
 				Intent intent = new Intent(getActivity(), IndexActivity.class);
 				startActivity(intent);
 				loginActivity.finish();

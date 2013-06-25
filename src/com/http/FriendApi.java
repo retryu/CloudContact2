@@ -8,7 +8,9 @@ import org.json.JSONObject;
 
 import com.db.model.Friend;
 import com.http.response.CommonResponse;
+import com.model.FriendItem;
 import com.model.FriendState;
+import com.util.PingYinUtil;
 
 public class FriendApi extends CommonApi {
 	private final static String url = "v1/user";
@@ -45,8 +47,21 @@ public class FriendApi extends CommonApi {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return friends;
+	}
+
+	public static List<FriendItem> getFriendItems() {
+		List<Friend> friends = getFriends();
+		ArrayList<FriendItem> friendItems = new ArrayList<FriendItem>();
+		for (int i = 0; i < friends.size(); i++) {
+			FriendItem friendItem = new FriendItem();
+			Friend friend = friends.get(i);
+			friendItem.setFriend(friend);
+			friendItem.setType(1);
+			friendItem.setNickName(PingYinUtil.getPingYin(friend.getName()));
+			friendItems.add(friendItem);
+		}
+		return friendItems;
 	}
 
 	public static CommonResponse addFriend(String firendId, String msg) {

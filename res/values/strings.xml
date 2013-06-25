@@ -13,5 +13,18 @@
 
     <!-- Message -->
     <string name="friend_list">好友列表</string>
+    <string name="frined">Friend</string>
+    <string name="upload">Upload</string>
+    <string name="Download">Download</string>
 
+    <string name="readyDownload">准备下载中</string>
+    <string name="finishDownload">下载完成</string>
+        
+    <string name="finish">完成:"</string>
+    <string name="uploading">正在上传</string>
+    <string name="upload_finish">上传完成</string>
+    <string name="loading">正在载入</string>
+    
+    <string  name="call">拨打电话</string>
+    <string  name="send_SMS">发送短信</string>
 </resources>

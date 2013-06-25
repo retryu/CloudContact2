@@ -9,15 +9,56 @@
         android:id="@+id/ListView_Contacts"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#ffffff"
-        >
+        android:background="#ffffff" >
     </com.widget.DropBottomListView>
+
     <com.view.DropBottomView
         android:id="@+id/DropBottomView_Contact"
-        android:background="#ccc"
         android:layout_width="fill_parent"
         android:layout_height="50dip"
         android:layout_alignParentBottom="true"
-        ></com.view.DropBottomView>
+        android:background="#ccc"
+        android:visibility="invisible" >
+    </com.view.DropBottomView>
+
+    <com.widget.SideBar
+        android:id="@+id/sideBar"
+        android:layout_width="20dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" >
+    </com.widget.SideBar>
+
+    <TextView
+        android:id="@+id/alphaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/show_head_toast_bg"
+        android:gravity="center"
+        android:maxWidth="70dip"
+        android:minWidth="70dip"
+        android:padding="10dip"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/Layout_Progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ProgressBar
+            android:id="@+id/Progress"
+            android:layout_width="50dip"
+            android:layout_height="50dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Progress"
+            android:text="@string/loading" />
+    </RelativeLayout>
 
 </RelativeLayout>

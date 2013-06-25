@@ -6,7 +6,7 @@ import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable(daoClass = ContactDaoImpl.class)
 public class Contact {
-	@DatabaseField(generatedId = true)
+	@DatabaseField(generatedId = true)  
 	private int id;
 	@DatabaseField
 	private String name;
